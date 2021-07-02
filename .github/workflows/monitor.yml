@@ -14,4 +14,3 @@ jobs:
           company: ${{secrets.COMPANY}}
           rvrToken: ${{secrets.RVR_TOKEN}}
           room: ${{secrets.ROOM}}
-          GH_TOKEN: ${{secrets.GH_TOKEN}}
