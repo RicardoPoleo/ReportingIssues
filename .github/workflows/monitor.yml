@@ -1,0 +1,17 @@
+on: 
+  workflow_dispatch:
+    inputs:
+
+jobs:
+  monitor_this:
+    runs-on: ubuntu-latest
+    name: Notifies the company about the issues
+    steps:
+      - name: Inform about interaction
+        id: hello
+        uses: RicardoPoleo/MonitorIssues@main
+        with:
+          company: ${{secrets.COMPANY}}
+          rvrToken: ${{secrets.RVR_TOKEN}}
+          room: ${{secrets.ROOM}}
+          GH_TOKEN: ${{secrets.GH_TOKEN}}
